@@ -1,22 +1,37 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
+import { useToast } from './Toast';
 import styles from '../styles/Cart.module.css';
 
 const Cart = () => {
   const { state, dispatch } = useCart();
+  const { success, warning } = useToast();
+  const navigate = useNavigate();
   const total = state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
   const updateQuantity = (id, quantity) => {
+    if (quantity < 1) {
+      warning('Số lượng phải lớn hơn 0');
+      return;
+    }
     dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } });
   };
 
   const removeItem = (id) => {
     dispatch({ type: 'REMOVE_FROM_CART', payload: id });
+    success('Đã xóa sản phẩm khỏi giỏ hàng');
   };
 
   const clearCart = () => {
-    dispatch({ type: 'CLEAR_CART' });
+    if (window.confirm('Bạn có chắc muốn xóa tất cả sản phẩm?')) {
+      dispatch({ type: 'CLEAR_CART' });
+      success('Đã xóa tất cả sản phẩm');
+    }
+  };
+
+  const handleCheckout = () => {
+    navigate('/checkout');
   };
 
   if (state.cart.length === 0) {
@@ -51,8 +66,10 @@ const Cart = () => {
       </div>
       <div className={styles.total}>
         <h2>Tổng tiền: {total.toLocaleString()} VNĐ</h2>
-        <button onClick={clearCart}>Xóa tất cả</button>
-        <button>Thanh toán</button> {/* Có thể mở rộng form thanh toán */}
+        <div className={styles.actions}>
+          <button onClick={clearCart} className={styles.clearBtn}>Xóa tất cả</button>
+          <button onClick={handleCheckout} className={styles.checkoutBtn}>Thanh toán</button>
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,49 @@
+.categoryPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.categoryHeader {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #FFE5E5 0%, #FFF9F9 100%);
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  border: 2px solid #FFB6C1;
+}
+
+.categoryHeader h1 {
+  color: #E75480;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.categoryHeader p {
+  color: #8B6F6F;
+  font-size: 1.2rem;
+}
+
+.productsContainer {
+  margin-bottom: 3rem;
+}
+
+.customInfo {
+  text-align: center;
+  padding: 2rem;
+  background-color: #FFE5E5;
+  border-radius: 15px;
+  border: 2px solid #FFB6C1;
+}
+
+.customInfo h2 {
+  color: #E75480;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.customInfo p {
+  color: #8B6F6F;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}

@@ -2,6 +2,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  background-color: #FFFFFF;
 }
 
 .banner {
@@ -29,26 +30,187 @@
 .bannerContent {
   position: relative;
   z-index: 2; /* Text nổi lên trên watermark */
-  background-color: rgba(0, 0, 0, 0.4); /* Lớp phủ tối để text dễ đọc */
+  background-color: rgba(255, 182, 193, 0.7); /* Lớp phủ hồng pastel */
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 20px;
   max-width: 80%;
 }
 
 .bannerContent h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  color: #8B6F6F;
 }
 
 .bannerContent p {
   font-size: 1.2rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  color: #8B6F6F;
 }
 
 .productsSection h2 {
   text-align: center;
   margin-bottom: 2rem;
+  color: #E75480;
+  font-size: 2rem;
+}
+
+.featuresSection {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: #FFE5E5;
+  border-radius: 15px;
+}
+
+/* Custom Design CTA */
+.customCTA {
+  margin: 4rem 0;
+  background: linear-gradient(135deg, #E75480 0%, #FFB6C1 100%);
+  border-radius: 25px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(231, 84, 128, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.customCTA::before {
+  content: '✨🎨🦋';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 4rem;
+  opacity: 0.2;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.ctaContent {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.ctaText h2 {
+  color: white;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ctaText p {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+}
+
+.ctaFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ctaFeatures li {
+  color: white;
+  font-size: 1.05rem;
+  padding: 0.8rem 0;
+  padding-left: 0.5rem;
+  border-left: 3px solid rgba(255, 255, 255, 0.5);
+  margin: 0.5rem 0;
+  transition: all 0.3s;
+}
+
+.ctaFeatures li:hover {
+  border-left-color: white;
+  padding-left: 1rem;
+}
+
+.ctaAction {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: white;
+  color: #E75480;
+  padding: 1.5rem 3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  transition: all 0.3s;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButton:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  background-color: #FFF9F9;
+}
+
+.ctaNote {
+  color: white;
+  font-size: 0.95rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+@media (max-width: 968px) {
+  .ctaContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .ctaText h2 {
+    font-size: 1.8rem;
+  }
+
+  .customCTA {
+    padding: 2rem;
+  }
+}
+
+.featuresSection h2 {
+  text-align: center;
+  color: #E75480;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 15px;
+  border: 2px solid #FFB6C1;
+}
+
+.feature h3 {
+  color: #E75480;
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  color: #8B6F6F;
 }
 
 .productGrid {
@@ -58,15 +220,26 @@
 }
 
 .productCard {
-  border: 1px solid #ddd;
+  border: 2px solid #FFB6C1;
   padding: 1rem;
   text-align: center;
-  border-radius: 8px;
-  transition: box-shadow 0.3s;
+  border-radius: 15px;
+  transition: all 0.3s;
+  background-color: #FFF9F9;
 }
 
 .productCard:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(255, 182, 193, 0.4);
+  transform: translateY(-5px);
+}
+
+.productImageLink,
+.productNameLink {
+  text-decoration: none;
+}
+
+.productImageLink {
+  display: block;
 }
 
 .productCard img {
@@ -74,28 +247,118 @@
   height: 200px;
   object-fit: cover;
   border-radius: 4px;
+  transition: transform 0.3s;
+}
+
+.productCard:hover img {
+  transform: scale(1.05);
 }
 
 .productCard h3 {
   margin: 0.5rem 0;
+  color: #8B6F6F;
+  transition: color 0.3s;
+}
+
+.productNameLink:hover h3 {
+  color: #E75480;
 }
 
 .productCard p {
   font-weight: bold;
-  color: #3D1700;
+  color: #E75480;
   margin: 0.5rem 0;
+  font-size: 1.1rem;
 }
 
 .productCard button {
-  background-color: #3D1700;
+  background-color: #FFB6C1;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  padding: 0.7rem 1.5rem;
+  border-radius: 20px;
   cursor: pointer;
   width: 100%;
+  font-weight: 600;
+  transition: all 0.3s;
 }
 
 .productCard button:hover {
-  background-color: #0056b3;
+  background-color: #E75480;
+  transform: scale(1.05);
+}
+
+/* Carousel Styles */
+.carouselContainer {
+  padding: 0 40px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.carouselSlide {
+  padding: 0 15px;
+}
+
+/* Custom Slick Arrows */
+.carouselContainer :global(.slick-prev),
+.carouselContainer :global(.slick-next) {
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+}
+
+.carouselContainer :global(.slick-prev) {
+  left: -40px;
+}
+
+.carouselContainer :global(.slick-next) {
+  right: -40px;
+}
+
+.carouselContainer :global(.slick-prev:before),
+.carouselContainer :global(.slick-next:before) {
+  font-size: 40px;
+  color: #FFB6C1;
+  opacity: 1;
+}
+
+.carouselContainer :global(.slick-prev:hover:before),
+.carouselContainer :global(.slick-next:hover:before) {
+  color: #E75480;
+}
+
+/* Custom Slick Dots */
+.carouselContainer :global(.slick-dots) {
+  bottom: -40px;
+}
+
+.carouselContainer :global(.slick-dots li button:before) {
+  font-size: 12px;
+  color: #FFB6C1;
+  opacity: 0.5;
+}
+
+.carouselContainer :global(.slick-dots li.slick-active button:before) {
+  color: #E75480;
+  opacity: 1;
+}
+
+.carouselContainer :global(.slick-dots li button:hover:before) {
+  color: #E75480;
+  opacity: 1;
+}
+
+/* Responsive carousel spacing */
+@media (max-width: 768px) {
+  .carouselContainer {
+    padding: 0 20px;
+  }
+  
+  .carouselContainer :global(.slick-prev) {
+    left: -20px;
+  }
+  
+  .carouselContainer :global(.slick-next) {
+    right: -20px;
+  }
 }

@@ -1,0 +1,197 @@
+.profilePage {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.profileContainer {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+  border: 2px solid #FFB6C1;
+  overflow: hidden;
+}
+
+.profileHeader {
+  background: linear-gradient(135deg, #FFE5E5 0%, #FFF9F9 100%);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-bottom: 2px solid #FFB6C1;
+}
+
+.avatar {
+  margin: 0 auto 1rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #FFB6C1;
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarPlaceholder {
+  width: 100%;
+  height: 100%;
+  background-color: #FFB6C1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.profileHeader h1 {
+  color: #E75480;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.email {
+  color: #8B6F6F;
+  font-size: 1.1rem;
+}
+
+.success {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  padding: 1rem;
+  margin: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #81C784;
+}
+
+.profileContent {
+  padding: 2rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #FFE5E5;
+}
+
+.sectionHeader h2 {
+  color: #E75480;
+  font-size: 1.5rem;
+}
+
+.editBtn {
+  background-color: #FFB6C1;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.editBtn:hover {
+  background-color: #E75480;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(231, 84, 128, 0.3);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  color: #8B6F6F;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #FFB6C1;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  font-family: inherit;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #E75480;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.3);
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.saveBtn,
+.cancelBtn {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.saveBtn {
+  background-color: #FFB6C1;
+  color: white;
+}
+
+.saveBtn:hover {
+  background-color: #E75480;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(231, 84, 128, 0.3);
+}
+
+.cancelBtn {
+  background-color: #FFE5E5;
+  color: #8B6F6F;
+}
+
+.cancelBtn:hover {
+  background-color: #FFB6C1;
+  color: white;
+}
+
+.infoDisplay {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoItem {
+  display: flex;
+  padding: 1rem;
+  background-color: #FFF9F9;
+  border-radius: 10px;
+  border: 1px solid #FFE5E5;
+}
+
+.label {
+  font-weight: 600;
+  color: #E75480;
+  min-width: 150px;
+}
+
+.value {
+  color: #8B6F6F;
+  flex: 1;
+}
